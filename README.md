@@ -1,1 +1,1 @@
-# Team19_2026SpringB_CSE540
+# Team19_2026SpringB_CSE540_UniversityCredentialSystem_SmartContractDesign
