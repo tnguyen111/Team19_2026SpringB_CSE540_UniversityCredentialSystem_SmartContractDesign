@@ -32,13 +32,13 @@ An encrypted off-chain database stores the actual document/JSON data (user insti
 ### Digital Wallets/DIDs: 
 Students store their credentials and sign requests using self-sovereign identity principles.
 ### How It Works:
-![HowItWorks](assets\HowItWorks.png)
+![HowItWorks](https://github.com/tnguyen111/Team19_2026SpringB_CSE540_UniversityCredentialSystem_SmartContractDesign/blob/38d88591a5ec5bfc916378ecaed6a094a48a96d0/assets/HowItWorks.png)
 
 ## Application Interface
 ### Overview:
 The front-end of the application will be web-based, which acts as the main interface for users, issuers, and verifiers. Instead of requiring users to manually install software or run blockchain scripts locally, the entire interaction happens through a browser-based UI. The page would connect to the blockchain using a wallet that lets users authenticate themselves through cryptographic signatures. Each user type will see different dashboard features based on their permissions.
 
-![InterfaceStructure](assets\InterfaceStructure.png)
+![InterfaceStructure](https://github.com/tnguyen111/Team19_2026SpringB_CSE540_UniversityCredentialSystem_SmartContractDesign/blob/38d88591a5ec5bfc916378ecaed6a094a48a96d0/assets/InterfaceStructure.png)
 
 ### How Users Log In:
 Users authenticate by connecting their wallet:
