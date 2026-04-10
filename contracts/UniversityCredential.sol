@@ -61,7 +61,7 @@ contract UniversityCredential
     }
 
     // Approve a issuer so it can issue credentials.
-    function ApproveIssuers(address issuer) external AdminOnly 
+    function ApproveIssuers(address issuer) public AdminOnly 
     {
         require(issuer != address(0), "Invalid address"); // Validate issuer's address
         approvedIssuers[issuer] = true;
@@ -69,7 +69,7 @@ contract UniversityCredential
     }
 
     // Remove a issuer's approval
-    function RevokeIssuers(address issuer) external AdminOnly
+    function RevokeIssuers(address issuer) public AdminOnly
     {
         approvedIssuers[issuer] = false;
     }
