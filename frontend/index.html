@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>University Credential DApp</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="index_styles.css">
+        <script src="https://unpkg.com/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
+    </head>
+    <body>
+        <div id="login_box">
+            <h1>University Credential System</h1>
+            <hr/>
+            <!-- Connect Wallet -->
+             <div id="login_input">
+                 <input class="form-control" type="text" id="walletAddress" placeholder="Enter wallet address">
+                 <button type="button" class="btn btn-primary" onclick="connectWallet()">Connect Wallet</button>
+             </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/web3@1.10.0/dist/web3.min.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>

@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20;
+pragma solidity ^0.8.18;
 
 // UniversityCredential Smart Contract
 // Group 19: Ba Le Nguyen, Chaolun Cai, Hang Qu, Khac Long Pham, Tung Nguyen

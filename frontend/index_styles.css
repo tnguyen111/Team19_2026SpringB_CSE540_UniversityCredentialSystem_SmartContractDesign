@@ -1,0 +1,34 @@
+body {
+    background-color: rgb(22, 126, 41);
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+#login_box {
+    background-color: white;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers vertically */
+    align-items: center;     /* Centers horizontally */
+    width: 40%;
+}
+
+hr {
+  width: 100%;
+  flex-grow: 1;
+}
+
+#login_input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+
+#login_input input {
+    text-align: center;
+}
