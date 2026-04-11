@@ -10,6 +10,8 @@ async function init() {
     account = localStorage.getItem("walletAddress") || accounts[0];
     console.log("Using account:", account);
 
+    document.getElementById("accountAddress").innerHTML = `Connected: ${account}`;
+
     const response = await fetch("./contracts/UniversityCredential.json");
     const json = await response.json();
 

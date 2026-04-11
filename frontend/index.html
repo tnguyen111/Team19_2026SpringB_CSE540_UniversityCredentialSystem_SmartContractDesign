@@ -8,12 +8,14 @@
     </head>
     <body>
         <div id="login_box">
-            <h1>University Credential System</h1>
+            <h1 id="content_title">
+                <span id="typewriter"></span>
+            </h1>
             <hr/>
             <!-- Connect Wallet -->
              <div id="login_input">
-                 <input class="form-control" type="text" id="walletAddress" placeholder="Enter wallet address">
-                 <button type="button" class="btn btn-primary" onclick="connectWallet()">Connect Wallet</button>
+                 <input class="form-control" type="text" id="walletAddress" placeholder="Enter Wallet Address">
+                 <button type="button" class="btn btn-primary" onclick="connectWallet()">Connect</button>
              </div>
         </div>
 
@@ -21,3 +23,42 @@
         <script src="index.js"></script>
     </body>
 </html>
+
+<script>
+    // Type Writer Effect Script
+    const words = ["Project Electric Shrimp Cracker", "University Credential Verifier", "Block Chain Based"];
+    let i = 0;        // word index
+    let j = 0;        // letter index in the word
+    let isDeleting = false;
+
+    const speed = 50;       // typing speed
+    const eraseSpeed = 50;   // delete speed
+    const delay = 1500;      // time pause at full word
+
+    function type() {
+        const element = document.getElementById("typewriter");
+        const currentWord = words[i];
+
+        if (!isDeleting) {
+            element.textContent = currentWord.substring(0, j++);
+        } else {
+            element.textContent = currentWord.substring(0, j--);
+        }
+
+        let currentSpeed = isDeleting ? eraseSpeed : speed;
+
+        if (!isDeleting && j === currentWord.length + 1) {
+            currentSpeed = delay;
+            isDeleting = true;
+        } 
+        else if (isDeleting && j === 0) {
+            isDeleting = false;
+            i = (i + 1) % words.length;
+        }
+
+        setTimeout(type, currentSpeed);
+    }
+
+    // Start effect
+    type();
+</script>

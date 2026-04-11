@@ -6,10 +6,6 @@ body {
 }
 
 #login_box {
-    background-color: white;
-    border-radius: 5px;
-    margin: 10px;
-    padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center; /* Centers vertically */
@@ -22,7 +18,15 @@ hr {
   flex-grow: 1;
 }
 
+#content_title {
+    color:white;
+}
+
 #login_input {
+    background-color: white;
+    border-radius: 5px;
+    width: 500px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -31,4 +35,14 @@ hr {
 
 #login_input input {
     text-align: center;
+}
+
+#typewriter::after {
+  content: "|";
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
 }

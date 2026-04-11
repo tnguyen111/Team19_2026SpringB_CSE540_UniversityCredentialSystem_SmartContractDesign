@@ -9,6 +9,11 @@ contract UniversityCredential
     // Set admin once when the contract is deployed
     address public admin;
 
+    // Constructor when the contract is deployed
+    constructor() {
+        admin = msg.sender;
+    }
+
     // A credential record to store everything about one issued credential
     struct Credential 
     {
@@ -30,6 +35,9 @@ contract UniversityCredential
     // Credential counter for unique IDs
     uint256 public credentialCount;
 
+    // Storage for valid user
+    address[] public registeredUsers;
+
     // Event when admin approves a issuer
     event IssuerApproved(address indexed issuer);
 
@@ -47,11 +55,6 @@ contract UniversityCredential
 
     // Event when someone verifies a credential
     event CredentialVerified(uint256 indexed credentialId, bool isValid);
-
-    // Constructor when the contract is deployed
-    constructor() {
-        admin = msg.sender;
-    }
 
     //// Admin functions ////
     // Function modifier to check admin permission
